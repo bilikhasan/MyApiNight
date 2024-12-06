@@ -12,7 +12,7 @@ namespace MyApiNight.DataAccessLayer.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; initial Catalog=ApiDbNight; integrated security:true");
+            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; initial Catalog=ApiDbNight; integrated security=true");
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }

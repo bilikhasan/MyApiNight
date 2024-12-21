@@ -40,7 +40,7 @@ namespace MyApiNight.WebUI.Controllers
             var responseMessage = await client.PostAsync("https://localhost:7212/api/Category", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("CatgoryList");
+                return RedirectToAction("CategoryList");
             }
             return View();
         }
@@ -83,7 +83,6 @@ namespace MyApiNight.WebUI.Controllers
                 return RedirectToAction("CategoryList");
             }
             return View();
-
         }
     }
 }

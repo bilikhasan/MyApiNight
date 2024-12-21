@@ -9,32 +9,39 @@ using System.Threading.Tasks;
 
 namespace MyApiNight.BusinessLayer.Concrete
 {
-    internal class ProductManager : IProductService
+    public class ProductManager : IProductService
     {
-        private readonly IProductDal _prodcutDal;
-        public ProductManager(IProductDal prodcutDal)
+        private readonly IProductDal _productDal;
+
+        public ProductManager(IProductDal productDal)
         {
-            _prodcutDal = prodcutDal;
+            _productDal = productDal;
         }
         public void TDelete(int id)
         {
-            _prodcutDal.Delete(id);
+            _productDal.Delete(id);
         }
         public List<Product> TGetAll()
         {
-            return _prodcutDal.GetAll();
+            return _productDal.GetAll();
         }
         public Product TGetById(int id)
         {
-            return _prodcutDal.GetById(id);
+            return _productDal.GetById(id);
         }
+
+        public int TGetProductCount()
+        {
+            return _productDal.GetProductCount();
+        }
+
         public void TInsert(Product entity)
         {
-            _prodcutDal.Insert(entity);
+            _productDal.Insert(entity);
         }
         public void TUpdate(Product entity)
         {
-            _prodcutDal.Update(entity);
+            _productDal.Update(entity);
         }
     }
 }

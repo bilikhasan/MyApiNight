@@ -13,7 +13,6 @@ namespace MyApiNight.WebUI.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
-
         public async Task<IActionResult> ProductList()
         {
             var client = _httpClientFactory.CreateClient();
@@ -26,7 +25,6 @@ namespace MyApiNight.WebUI.Controllers
             }
             return View();
         }
-
 
         [HttpGet]
         public IActionResult CreateProduct()
